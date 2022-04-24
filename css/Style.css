@@ -1,0 +1,256 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+nav{
+    background: #222;
+    padding: 5px 20px;
+
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.logo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.menu li{
+    font-size: 16px;
+    padding: 15px 5px;
+}
+
+.menu li a{
+    display: block;
+}
+
+.logo a{
+    font-size: 20px;
+}
+
+.button.secondary{
+    border-bottom: #444 solid;
+}
+
+/* mobile Menu */
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle{
+    cursor: pointer;
+}
+
+.bars{
+    background: #999;
+    display: inline-block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+}
+.bars::before,.bars::after{
+    background: #999;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 18px;
+    position: absolute;
+}
+.bars::before{
+    top: 5px;
+}
+.bars::after{
+    top: -5px;
+}
+
+.button.secondary{
+    border: 0;
+}
+
+.button a{
+    text-decoration: none;
+    padding: 7px 15px;
+    background: teal;
+    border: 1px solid #006d6d;
+    border-radius: 50em;
+}
+.button.secondary a{
+    background: transparent;
+}
+
+.button.secondary a:hover{
+    color: #ddd;
+
+}
+.button:not(.secondary) a:hover{
+    background: #006d6d;
+    border-color: #005959;
+}
+
+
+/* Acceuil */
+
+:root{
+    --primary:hsla(30, 97%, 63%, 0.65);
+    --secondary:hsla(230, 96%, 62%, 0.65);
+}
+
+.acceuil{
+    /* background-image: url(https://cdn.shopify.com/s/files/1/0070/4131/9002/t/5/assets/pf-130bf6df--etapes-ecole-privee-Edited?v=1626333183); */
+    /* background-size: 35% 70%; */
+    /* background-size: cover; */
+
+    height: 700px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary)) ,url(https://cdn.shopify.com/s/files/1/0070/4131/9002/t/5/assets/pf-130bf6df--etapes-ecole-privee-Edited?v=1626333183) no-repeat center center / cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.acceuil h2{
+    margin-top: 40px;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+}
+
+.acceuil h3{
+    font-family: 'Raleway', sans-serif;
+    margin-top: 40px;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    max-width: 80%;
+}
+
+
+/* Infos */
+
+.infos{
+    height: 600px;
+    padding: 50px 40px;
+    background: linear-gradient(-45deg, #EE7752, #e9c704, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+}
+
+@keyframes change {
+    0%{
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.video{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.container_vid {
+    display: grid;
+    align-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 0 39px; 
+}
+
+.container_vid h3{
+    font-family: 'Roboto';
+}
+
+.container_map{
+    height: 600px;
+    display: grid;
+    justify-content:space-around;
+    background-color: rgb(52 46 46);
+    padding-top: 70px;
+
+}
+
+.map-container-google-1{
+    justify-content:center;
+    padding-top: 70px;
+    width: 800px;
+}
+
+.offres {
+    padding: 60px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-gap: 9px;
+    /* grid-auto-rows: minmax(100px, auto); */
+}
+.card {
+    max-width: 24.2%;
+}
+.container_offres, .mb-4{
+    padding: 60px 120px;
+}
+
+.card-img-top {
+    height: 125px;
+}
+
+.mb-4{
+    background: linear-gradient(-45deg, #EE7752, #e9c704, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+
+}
+section.contact {
+    padding: 50px 0;
+    background: linear-gradient(-45deg, #EE7752, #e9c704, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+}
+section.contact .con-form {
+    max-width: 980px;
+    margin: 0 auto;
+}
+/* ==========================
+        responsive
+========================== */
+
+@media (max-width: 767px) {}
+
+@media (max-width: 480px) {}
+
+@media (min-width: 768px) and (max-width: 991px) {}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* contact form */
+    section.contact .con-form {
+        max-width: 780px;
+    }
+}
